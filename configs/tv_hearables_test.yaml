@@ -1,0 +1,358 @@
+testname: TV + Hearables Listening Test
+testId: tv_hearables_test
+bufferSize: 2048
+stopOnErrors: true
+showButtonPreviousPage: true
+remoteService: service/write.php
+
+pages:
+    - type: generic
+      id: intro_page
+      name: Introduction
+      content: Thank you for taking part in this listening test.
+        <br><br>
+        In this experiment, we are interested in evaluating the use of a novel two-device
+        audio playback system for consumption of TV programme content in domestic settings.
+        Specifically, we are looking at how the audio content might be distributed across the two 
+        devices and what listener preferences are for this distribution.
+        <br><br>
+        The test consists of a series of programme items, where each item has a number of conditions
+        that are to be rated on a numerical scale from 0 - 100. The test is split into two sections.
+        The first section will ask you to rate each condition by <strong>Overall Preference</strong>, and
+        the second section will ask you to rate each condition by <strong>Dialogue Clarity</strong>.
+        You are welcome to have a short break between the two sections. Before the test begins,
+        there will be a practice example so you can familiarise yourself with the test interface.
+    - type: consent
+      id: consent_page
+      name: Consent
+      mustConsent: true
+      content: Please confirm that you have read both the participant information sheet and the
+        consent form, and that you have signed and answered the demographics questions on the back
+        of the consent form.
+        <br><br>
+        Once complete, please confirm your consent on screen and move on to the next page.
+    - type: mushra
+      id: practice_page
+      name: Practice Example
+      content: This is a practice example outlining how to use the test interface. Please take your 
+        time to familiarise yourself with the interface and controls.
+        <br><br>
+        At the top of the interface is a waveform view which indicates the position of the playhead
+        on the stimuli. The bar below the waveform can be used to shorten or lengthen the loop
+        region of the stimuli by dragging the two braces to the desired position. Each condition
+        has a play/pause button and a rating slider. The buttons can be toggled using the mouse or
+        by pressing the spacebar. You can move between conditions by using the mouse or by using
+        the left and right arrows. The slider can only be adjusted when the corresponding condition
+        is selected, and can be moved using the mouse or the up/down arrow keys.
+        <br><br>
+        While listening to this item, <strong>please adjust the laptop volume so that it is set at
+        a comfortable level for you. Once set, please do not adjust it again!</strong>
+        <br><br>
+        If you have any questions, please ask the facilitator. Once you are happy with the interface
+        and the test format, please press 'Next' and proceed with the test.
+      showWaveform: true
+      enableLooping: true
+      strict: false
+      reference: configs/resources/audio/bp1_FM_TV_only.wav
+      randomize: true
+      showConditionNames: false
+      stimuli:
+          C1: configs/resources/audio/bp1_FM_TV_only.wav
+          C2: configs/resources/audio/bp1_FM_Earbuds_only.wav
+          C3: configs/resources/audio/bp1_FM_FM.wav
+          C4: configs/resources/audio/bp1_D_FM.wav
+          C5: configs/resources/audio/bp1_ME_FM.wav
+    -
+      - random
+      - type: mushra
+        id: preference_test_1
+        name: Preference Test 1
+        content: Your task is to listen to each condition and give them a rating based on your <strong>
+          overall preference</strong> using the scale below. This means that you would rate the condition
+          that you would most like to hear with the highest score. You may rank multiple conditions with
+          the same score.
+        showWaveform: true
+        enableLooping: true
+        strict: false
+        reference: configs/resources/audio/bp2_FM_TV_only.wav
+        randomize: true
+        showConditionNames: false
+        stimuli:
+            C1: configs/resources/audio/bp2_FM_TV_only.wav
+            C2: configs/resources/audio/bp2_FM_Earbuds_only.wav
+            C3: configs/resources/audio/bp2_FM_FM.wav
+            C4: configs/resources/audio/bp2_D_FM.wav
+            C5: configs/resources/audio/bp2_ME_FM.wav
+      - type: mushra
+        id: preference_test_2
+        name: Preference Test 2
+        content: Your task is to listen to each condition and give them a rating based on your <strong>
+          overall preference</strong> using the scale below. This means that you would rate the condition
+          that you would most like to hear with the highest score. You may rank multiple conditions with
+          the same score.
+        showWaveform: true
+        enableLooping: true
+        strict: false
+        reference: configs/resources/audio/bp3_FM_TV_only.wav
+        randomize: true
+        showConditionNames: false
+        stimuli:
+            C1: configs/resources/audio/bp3_FM_TV_only.wav
+            C2: configs/resources/audio/bp3_FM_Earbuds_only.wav
+            C3: configs/resources/audio/bp3_FM_FM.wav
+            C4: configs/resources/audio/bp3_D_FM.wav
+            C5: configs/resources/audio/bp3_ME_FM.wav
+      - type: mushra
+        id: preference_test_3
+        name: Preference Test 3
+        content: Your task is to listen to each condition and give them a rating based on your <strong>
+          overall preference</strong> using the scale below. This means that you would rate the condition
+          that you would most like to hear with the highest score. You may rank multiple conditions with
+          the same score.
+        showWaveform: true
+        enableLooping: true
+        strict: false
+        reference: configs/resources/audio/ctm2_FM_TV_only.wav
+        randomize: true
+        showConditionNames: false
+        stimuli:
+            C1: configs/resources/audio/ctm2_FM_TV_only.wav
+            C2: configs/resources/audio/ctm2_FM_Earbuds_only.wav
+            C3: configs/resources/audio/ctm2_FM_FM.wav
+            C4: configs/resources/audio/ctm2_D_FM.wav
+            C5: configs/resources/audio/ctm2_ME_FM.wav
+      - type: mushra
+        id: preference_test_4
+        name: Preference Test 4
+        content: Your task is to listen to each condition and give them a rating based on your <strong>
+          overall preference</strong> using the scale below. This means that you would rate the condition
+          that you would most like to hear with the highest score. You may rank multiple conditions with
+          the same score.
+        showWaveform: true
+        enableLooping: true
+        strict: false
+        reference: configs/resources/audio/ctm4_FM_TV_only.wav
+        randomize: true
+        showConditionNames: false
+        stimuli:
+            C1: configs/resources/audio/ctm4_FM_TV_only.wav
+            C2: configs/resources/audio/ctm4_FM_Earbuds_only.wav
+            C3: configs/resources/audio/ctm4_FM_FM.wav
+            C4: configs/resources/audio/ctm4_D_FM.wav
+            C5: configs/resources/audio/ctm4_ME_FM.wav
+      - type: mushra
+        id: preference_test_5
+        name: Preference Test 5
+        content: Your task is to listen to each condition and give them a rating based on your <strong>
+          overall preference</strong> using the scale below. This means that you would rate the condition
+          that you would most like to hear with the highest score. You may rank multiple conditions with
+          the same score.
+        showWaveform: true
+        enableLooping: true
+        strict: false
+        reference: configs/resources/audio/football1_FM_TV_only.wav
+        randomize: true
+        showConditionNames: false
+        stimuli:
+            C1: configs/resources/audio/football1_FM_TV_only.wav
+            C2: configs/resources/audio/football1_FM_Earbuds_only.wav
+            C3: configs/resources/audio/football1_FM_FM.wav
+            C4: configs/resources/audio/football1_D_FM.wav
+            C5: configs/resources/audio/football1_ME_FM.wav
+      - type: mushra
+        id: preference_test_6
+        name: Preference Test 6
+        content: Your task is to listen to each condition and give them a rating based on your <strong>
+          overall preference</strong> using the scale below. This means that you would rate the condition
+          that you would most like to hear with the highest score. You may rank multiple conditions with
+          the same score.
+        showWaveform: true
+        enableLooping: true
+        strict: false
+        reference: configs/resources/audio/football3_FM_TV_only.wav
+        randomize: true
+        showConditionNames: false
+        stimuli:
+            C1: configs/resources/audio/football3_FM_TV_only.wav
+            C2: configs/resources/audio/football3_FM_Earbuds_only.wav
+            C3: configs/resources/audio/football3_FM_FM.wav
+            C4: configs/resources/audio/football3_D_FM.wav
+            C5: configs/resources/audio/football3_ME_FM.wav
+      - type: mushra
+        id: repeat_1
+        name: Preference Test 7
+        content: Your task is to listen to each condition and give them a rating based on your <strong>
+          overall preference</strong> using the scale below. This means that you would rate the condition
+          that you would most like to hear with the highest score. You may rank multiple conditions with
+          the same score.
+        showWaveform: true
+        enableLooping: true
+        strict: false
+        reference: configs/resources/audio/bp3_FM_TV_only.wav
+        randomize: true
+        showConditionNames: false
+        stimuli:
+            C1: configs/resources/audio/bp3_FM_TV_only.wav
+            C2: configs/resources/audio/bp3_FM_Earbuds_only.wav
+            C3: configs/resources/audio/bp3_FM_FM.wav
+            C4: configs/resources/audio/bp3_D_FM.wav
+            C5: configs/resources/audio/bp3_ME_FM.wav
+    -
+      - type: generic
+        id: block_partition
+        name: Section 1 Complete!
+        content: You have completed the first half of the test. You may take a short break here if
+          you require it. The second half of the test will consist of the same stimuli, however this
+          time you will rate each condition based on the <strong>clarity of the dialogue.</strong>
+          <br>When you are ready to begin, click 'Next'.
+    -
+      - random
+      - type: mushra
+        id: clarity_test_1
+        name: Dialogue Clarity Test 1
+        content: Your task is to listen to each condition and give them a rating based on the <strong>
+          clarity of the dialogue</strong> using the scale below. This means that you would rate the condition
+          that has the clearest dialogue to you with the highest score. You may rank multiple conditions with
+          the same score.
+        showWaveform: true
+        enableLooping: true
+        strict: false
+        reference: configs/resources/audio/bp2_FM_TV_only.wav
+        randomize: true
+        showConditionNames: false
+        stimuli:
+            C1: configs/resources/audio/bp2_FM_TV_only.wav
+            C2: configs/resources/audio/bp2_FM_Earbuds_only.wav
+            C3: configs/resources/audio/bp2_FM_FM.wav
+            C4: configs/resources/audio/bp2_D_FM.wav
+            C5: configs/resources/audio/bp2_ME_FM.wav
+      - type: mushra
+        id: clarity_test_2
+        name: Dialogue Clarity Test 2
+        content: Your task is to listen to each condition and give them a rating based on the <strong>
+          clarity of the dialogue</strong> using the scale below. This means that you would rate the condition
+          that has the clearest dialogue to you with the highest score. You may rank multiple conditions with
+          the same score.
+        showWaveform: true
+        enableLooping: true
+        strict: false
+        reference: configs/resources/audio/bp3_FM_TV_only.wav
+        randomize: true
+        showConditionNames: false
+        stimuli:
+            C1: configs/resources/audio/bp3_FM_TV_only.wav
+            C2: configs/resources/audio/bp3_FM_Earbuds_only.wav
+            C3: configs/resources/audio/bp3_FM_FM.wav
+            C4: configs/resources/audio/bp3_D_FM.wav
+            C5: configs/resources/audio/bp3_ME_FM.wav
+      - type: mushra
+        id: clarity_test_3
+        name: Dialogue Clarity Test 3
+        content: Your task is to listen to each condition and give them a rating based on the <strong>
+          clarity of the dialogue</strong> using the scale below. This means that you would rate the condition
+          that has the clearest dialogue to you with the highest score. You may rank multiple conditions with
+          the same score.
+        showWaveform: true
+        enableLooping: true
+        strict: false
+        reference: configs/resources/audio/ctm1_FM_TV_only.wav
+        randomize: true
+        showConditionNames: false
+        stimuli:
+            C1: configs/resources/audio/ctm1_FM_TV_only.wav
+            C2: configs/resources/audio/ctm1_FM_Earbuds_only.wav
+            C3: configs/resources/audio/ctm1_FM_FM.wav
+            C4: configs/resources/audio/ctm1_D_FM.wav
+            C5: configs/resources/audio/ctm1_ME_FM.wav
+      - type: mushra
+        id: clarity_test_4
+        name: Dialogue Clarity Test 4
+        content: Your task is to listen to each condition and give them a rating based on the <strong>
+          clarity of the dialogue</strong> using the scale below. This means that you would rate the condition
+          that has the clearest dialogue to you with the highest score. You may rank multiple conditions with
+          the same score.
+        showWaveform: true
+        enableLooping: true
+        strict: false
+        reference: configs/resources/audio/ctm2_FM_TV_only.wav
+        randomize: true
+        showConditionNames: false
+        stimuli:
+            C1: configs/resources/audio/ctm2_FM_TV_only.wav
+            C2: configs/resources/audio/ctm2_FM_Earbuds_only.wav
+            C3: configs/resources/audio/ctm2_FM_FM.wav
+            C4: configs/resources/audio/ctm2_D_FM.wav
+            C5: configs/resources/audio/ctm2_ME_FM.wav
+      - type: mushra
+        id: clarity_test_5
+        name: Dialogue Clarity Test 5
+        content: Your task is to listen to each condition and give them a rating based on the <strong>
+          clarity of the dialogue</strong> using the scale below. This means that you would rate the condition
+          that has the clearest dialogue to you with the highest score. You may rank multiple conditions with
+          the same score.
+        showWaveform: true
+        enableLooping: true
+        strict: false
+        reference: configs/resources/audio/football1_FM_TV_only.wav
+        randomize: true
+        showConditionNames: false
+        stimuli:
+            C1: configs/resources/audio/football1_FM_TV_only.wav
+            C2: configs/resources/audio/football1_FM_Earbuds_only.wav
+            C3: configs/resources/audio/football1_FM_FM.wav
+            C4: configs/resources/audio/football1_D_FM.wav
+            C5: configs/resources/audio/football1_ME_FM.wav
+      - type: mushra
+        id: clarity_test_6
+        name: Dialogue Clarity Test 6
+        content: Your task is to listen to each condition and give them a rating based on the <strong>
+          clarity of the dialogue</strong> using the scale below. This means that you would rate the condition
+          that has the clearest dialogue to you with the highest score. You may rank multiple conditions with
+          the same score.
+        showWaveform: true
+        enableLooping: true
+        strict: false
+        reference: configs/resources/audio/football3_FM_TV_only.wav
+        randomize: true
+        showConditionNames: false
+        stimuli:
+            C1: configs/resources/audio/football3_FM_TV_only.wav
+            C2: configs/resources/audio/football3_FM_Earbuds_only.wav
+            C3: configs/resources/audio/football3_FM_FM.wav
+            C4: configs/resources/audio/football3_D_FM.wav
+            C5: configs/resources/audio/football3_ME_FM.wav
+      - type: mushra
+        id: repeat_2
+        name: Dialogue Clarity Test 7
+        content: Your task is to listen to each condition and give them a rating based on your <strong>
+          overall preference</strong> using the scale below. This means that you would rate the condition
+          that you would most like to hear with the highest score. You may rank multiple conditions with
+          the same score.
+        showWaveform: true
+        enableLooping: true
+        strict: false
+        reference: configs/resources/audio/ctm4_FM_TV_only.wav
+        randomize: true
+        showConditionNames: false
+        stimuli:
+            C1: configs/resources/audio/ctm4_FM_TV_only.wav
+            C2: configs/resources/audio/ctm4_FM_Earbuds_only.wav
+            C3: configs/resources/audio/ctm4_FM_FM.wav
+            C4: configs/resources/audio/ctm4_D_FM.wav
+            C5: configs/resources/audio/ctm4_ME_FM.wav
+    -
+      - type: finish
+        name: Thank You!
+        content: Thank you for your participation.
+          <br><br>
+          <strong>Before you submit your results, please click the link below to open the exit survey.
+          </strong>
+          <br>LINK TO QUALTRICS.
+          <br><br>
+          Now please click 'Send Results' to submit your results. You are now welcome to complete the exit
+          survey!
+        showResults: false
+        writeResults: false
+
+
+
